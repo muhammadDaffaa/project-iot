@@ -65,7 +65,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             DateTime time = DateTime.Now;  
             string format = "yyyy-MM-dd HH:mm:ss";
-            Console.WriteLine(time.ToString(format));
+            // Console.WriteLine(time.ToString(format));
             
             string payload = System.Text.Encoding.Default.GetString(e.Message);
     
@@ -75,15 +75,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 JsonElement root = doc.RootElement;
                 var temperature = root.GetProperty("temperature");
                 var humidity = root.GetProperty("humidity");
-                // Console.Write(temperature.GetType());
-                // Console.Write(humidity.GetType());
-                // Console.WriteLine(temperature);
-                // Console.WriteLine(humidity);
-                // conn.connectDB.Open();
-                // InsertTemperature(temperature.ToString(),humidity.ToString());
-                // InsertTemperature(temperature.ToString(),humidity.ToString());
-        conMysql conn = new conMysql();
-        conn.SaveTemperature(temperature.ToString(),humidity.ToString(),time.ToString(format));
+                
+            conMysql conn = new conMysql();
+            conn.SaveTemperature(temperature.ToString(),humidity.ToString(),time.ToString(format));
         }
 
         static void Main(string[] args)

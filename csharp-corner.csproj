@@ -16,6 +16,7 @@
     <PackageReference Include="S7netplus" Version="0.14.0" />
     <PackageReference Include="SmartIOT.Connector.Plc.S7Net" Version="0.3.20220801.1" />
     <PackageReference Include="System.Data.Odbc" Version="6.0.1" />
+    <PackageReference Include="Telegram.Bot" Version="18.0.0" />
   </ItemGroup>
 
 </Project>
