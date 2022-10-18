@@ -87,12 +87,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string broker = "aessa.space";
             int port = 1883;
             string topic = "esp32/dht11";
+            // string topicPublish = "cs/publish";
             string clientId = Guid.NewGuid().ToString();
             // string username = "emqx";
             // string password = "public";
             MqttClient client = ConnectMQTT(broker, port, clientId);
             Subscribe(client, topic);
-            // Publish(client, topic);
+            // Publish(client, topicPublish);
                    
         }
     }
