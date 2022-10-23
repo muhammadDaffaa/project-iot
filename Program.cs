@@ -1,32 +1,17 @@
-﻿// using Internal;
-// using Internal;
-using System;
+﻿using System;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using MySql.Data.MySqlClient;
-using S7.Net;
-// using System.Diagnostics.Stopwatch;
-// using System.Text.Json.JsonSerializer;
+
 using System.Text.Json;
-// using Serilog;
-// using System.Text.Json;
-// using MQTTnet;
-// using MQTTnet.Client;
-// using MQTTnet.Client.Options;
-// using MQTTnet.Packets;
-// using MQTTnet.Samples.Helpers;
+
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
-       conMysql conn = new conMysql();
-        // public ;
-        // public static string conConfig;
-        //  conMysql conn = new conMysql(); 
-        // conMysql conn = new conMysql();
-        //   static MqttClient ConnectMQTT(string broker, int port, string clientId, string username, string password)
+        conMysql conn = new conMysql();
+      
           static MqttClient ConnectMQTT(string broker, int port, string clientId)
         {
             MqttClient client = new MqttClient(broker, port, false, MqttSslProtocols.None, null, null);
@@ -63,21 +48,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
         static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-            DateTime time = DateTime.Now;  
-            string format = "yyyy-MM-dd HH:mm:ss";
-            // Console.WriteLine(time.ToString(format));
+            // Format DATETIME at MySQL
+            // DateTime time = DateTime.Now;  
+            // string format = "yyyy-MM-dd HH:mm:ss";
+            
             
             string payload = System.Text.Encoding.Default.GetString(e.Message);
     
-            // var myDetails = decode(payload);
-            // Console.WriteLine(string.Concat("Hi ", myData.Temperature, " " + myData.Humidity));
                 using JsonDocument doc = JsonDocument.Parse(payload);
                 JsonElement root = doc.RootElement;
+                    
                 var temperature = root.GetProperty("temperature");
                 var humidity = root.GetProperty("humidity");
+                var vOut = root.GetProperty("vOut");
+                var vIn = root.GetProperty("vIn");
                 
             conMysql conn = new conMysql();
-            conn.SaveTemperature(temperature.ToString(),humidity.ToString(),time.ToString(format));
+            conn.SaveTemperature(temperature.ToString(),humidity.ToString(),vOut.ToString(),vIn.ToString());
         }
 
         static void Main(string[] args)
@@ -86,13 +73,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // MQTT Configuration Setting
             string broker = "aessa.space";
             int port = 1883;
-            string topic = "esp32/dht11";
+            string topic = "esp32/sensor";
+
             // string topicPublish = "cs/publish";
             string clientId = Guid.NewGuid().ToString();
+
             // string username = "emqx";
             // string password = "public";
             MqttClient client = ConnectMQTT(broker, port, clientId);
             Subscribe(client, topic);
+            
             // Publish(client, topicPublish);
                    
         }
