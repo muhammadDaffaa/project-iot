@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {}
+    "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {}
   },
   "projects": {
-    "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {
+    "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
+        "projectUniqueName": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
         "projectName": "csharp-corner",
-        "projectPath": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
+        "projectPath": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
         "packagesPath": "C:\\Users\\Daffa\\.nuget\\packages\\",
-        "outputPath": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\obj\\",
+        "outputPath": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

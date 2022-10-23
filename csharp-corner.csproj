@@ -11,9 +11,7 @@
   <ItemGroup>
     <PackageReference Include="M2Mqtt" Version="4.3.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-rc.1.22426.10" />
-    <PackageReference Include="MQTTnet" Version="4.1.1.318" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />
-    <PackageReference Include="S7netplus" Version="0.14.0" />
     <PackageReference Include="SmartIOT.Connector.Plc.S7Net" Version="0.3.20220801.1" />
     <PackageReference Include="System.Data.Odbc" Version="6.0.1" />
     <PackageReference Include="Telegram.Bot" Version="18.0.0" />

@@ -53,7 +53,7 @@ class conMysql
     public void SaveTemperature(string temperature, string humidity,string vOut,string vIn,string datetime)
     {
             
-            string query = $"INSERT INTO sensor (temperature,humidity,vOut,vIn) VALUES ({temperature},{humidity},{vOut},{vIn},'{datetime}');";
+            string query = $"INSERT INTO sensor (temperature,humidity,vOut,vIn,datetime) VALUES ({temperature},{humidity},{vOut},{vIn},'{datetime}');";
 
     //open connection
     if (this.OpenConnection() == true)
