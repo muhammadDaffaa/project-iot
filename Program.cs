@@ -49,8 +49,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
             // Format DATETIME at MySQL
-            // DateTime time = DateTime.Now;  
-            // string format = "yyyy-MM-dd HH:mm:ss";
+            DateTime time = DateTime.Now;  
+            string format = "yyyy-MM-dd HH:mm:ss";
             
             
             string payload = System.Text.Encoding.Default.GetString(e.Message);
@@ -64,7 +64,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 var vIn = root.GetProperty("vIn");
                 
             conMysql conn = new conMysql();
-            conn.SaveTemperature(temperature.ToString(),humidity.ToString(),vOut.ToString(),vIn.ToString());
+            conn.SaveTemperature(temperature.ToString(),humidity.ToString(),vOut.ToString(),vIn.ToString(),format.ToString());
         }
 
         static void Main(string[] args)
