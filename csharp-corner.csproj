@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Docker.DotNet" Version="3.125.12" />
     <PackageReference Include="M2Mqtt" Version="4.3.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-rc.1.22426.10" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />

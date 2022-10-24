@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {}
+    "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {}
   },
   "projects": {
-    "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {
+    "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
+        "projectUniqueName": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
         "projectName": "csharp-corner",
-        "projectPath": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
+        "projectPath": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\csharp-corner.csproj",
         "packagesPath": "C:\\Users\\Daffa\\.nuget\\packages\\",
-        "outputPath": "D:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\obj\\",
+        "outputPath": "d:\\Daffa Files\\Documents\\CSharp\\csharp-corner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,13 +41,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.12, )"
+            },
             "M2Mqtt": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "MQTTnet": {
-              "target": "Package",
-              "version": "[4.1.1.318, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
@@ -56,10 +56,6 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.30, )"
-            },
-            "S7netplus": {
-              "target": "Package",
-              "version": "[0.14.0, )"
             },
             "SmartIOT.Connector.Plc.S7Net": {
               "target": "Package",
